@@ -12,3 +12,6 @@ ref.txt
 # py caches
 __pycache__/
 *.pyc
+
+# db
+stock.db
