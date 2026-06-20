@@ -1,0 +1,14 @@
+# claude skill md file helper
+project-guide-python-ETL.md
+.claude/
+
+# folders
+venv/
+output/
+
+# tests
+ref.txt
+
+# py caches
+__pycache__/
+*.pyc
