@@ -21,6 +21,8 @@ jobs:
         run: pip install -r requirements.txt
       - name: Run pipeline
         run: python run.py
+      - name: Debug output
+        run: ls -la output/
       - name: Commit chart
         run: |
           git config user.name "github-actions"
