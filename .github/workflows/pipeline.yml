@@ -1,0 +1,29 @@
+name: Daily Stock Pipeline
+
+on:
+  schedule:
+    - cron: "0 22 * * 0-4"
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Run pipeline
+        run: python run.py
+      - name: Commit chart
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add output/chart.png
+          git commit -m "Update chart" || echo "No changes to commit"
+          git push
