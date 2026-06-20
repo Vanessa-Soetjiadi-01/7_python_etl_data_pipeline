@@ -4,7 +4,6 @@ project-guide-python-ETL.md
 
 # folders
 venv/
-output/
 
 # tests
 ref.txt
