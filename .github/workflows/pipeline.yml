@@ -25,6 +25,6 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add output/chart.png
+          git add -f output/chart.png
           git commit -m "Update chart" || echo "No changes to commit"
           git push
