@@ -1,6 +1,6 @@
 name: Daily Stock Pipeline
 
-on:
+"on":
   schedule:
     - cron: "0 22 * * 0-4"
   workflow_dispatch:
