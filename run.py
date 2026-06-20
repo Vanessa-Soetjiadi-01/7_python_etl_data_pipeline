@@ -8,3 +8,6 @@ def run_all():
 
   store_data(ticker_data)
   report_data(ticker_data)
+
+if __name__ == "__main__":
+ run_all()
