@@ -15,3 +15,6 @@ __pycache__/
 
 # db
 stock.db
+
+# charts
+*.png
